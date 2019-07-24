@@ -1,11 +1,17 @@
 final int SCROLL_SPEED = 2; 
 PImage jiki;
+PImage enemy;
 PImage back_ground;
+PImage start;
+PImage end;
 int       sx, sy;           
 
 void setup_image(){
   jiki = loadImage("./image/jiki.png");
+  enemy = loadImage("./image/enemy.png");
   back_ground = loadImage("./image/back_ground.png");
+  start = loadImage("./image/start.png");
+  end = loadImage("./image/clear.png");
   sx=0;
   sy=0;
 }

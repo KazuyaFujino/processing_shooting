@@ -14,5 +14,4 @@ void setup_music() {
   shot = minim.loadFile("./sound/shot.mp3");
   damage = minim.loadFile("./sound/player_damage.mp3");
   e_damage = minim.loadFile("./sound/enemy_damage.mp3");
-  song.loop();
 }

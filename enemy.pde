@@ -1,5 +1,3 @@
-ArrayList<Bullet> eneBullets;
-ArrayList<Enemy> enemies;
 class Enemy{
   
   PVector loc;
@@ -9,7 +7,7 @@ class Enemy{
   boolean isDead;
   
   Enemy(){
-    size = 25;
+    size = 35;
     loc = new PVector(random(size / 2, width - size / 2), -size / 2);
     vel = 3;
     coolingTime = int(random(60));
@@ -19,7 +17,8 @@ class Enemy{
   void display(){
     noFill();
     stroke(255, 0, 0);
-    rect(loc.x, loc.y, size, size);
+    //rect(loc.x, loc.y, size, size);
+    image(enemy,loc.x - size / 2, loc.y - size / 2 , size, size);
   }
 
   void update(){
@@ -41,6 +40,7 @@ class Enemy{
         isDead = true;
         b.isDead = true;
         e_damage.play(0);
+        score += 100;
         break;
       }
     }
